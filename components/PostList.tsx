@@ -1,6 +1,6 @@
+import type { PostSummary } from "nefantaris";
 import { Link } from "wouter";
-import formatDate from "../formatDate";
-import type { PostSummary } from "../types";
+import PostDate from "./PostDate";
 
 type PostListProps = {
     posts: PostSummary[];
@@ -23,12 +23,10 @@ const PostList = ({ posts, postTitleTag }: PostListProps) => {
                                 {post.title}
                             </Link>
                         </PostTitleTag>
-                        <time
-                            dateTime={post.date}
+                        <PostDate
+                            date={post.date}
                             className="text-brand-gray mt-1 block text-sm"
-                        >
-                            {formatDate(post.date)}
-                        </time>
+                        />
                         {!!post.description && (
                             <p className="text-brand-gray mt-2">
                                 {post.description}

@@ -1,9 +1,7 @@
+import type { NotFoundProps } from "nefantaris";
 import { Link } from "wouter";
-import type { SiteMeta } from "../types";
 
-type NotFoundTemplateProps = { site: SiteMeta };
-
-const NotFoundTemplate = ({ site }: NotFoundTemplateProps) => (
+const NotFoundTemplate = ({ site }: NotFoundProps) => (
     <section className="mx-auto max-w-3xl py-16 text-center">
         <p className="text-brand-primary text-sm font-semibold tracking-widest uppercase">
             404

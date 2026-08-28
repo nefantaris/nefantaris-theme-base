@@ -1,19 +1,17 @@
+import type { TemplateProps } from "nefantaris";
+import PostDate from "../components/PostDate";
 import Prose from "../components/Prose";
-import formatDate from "../formatDate";
-import type { TemplateProps } from "../types";
 
 const PostTemplate = ({ meta, children }: TemplateProps) => (
     <article className="mx-auto max-w-3xl">
         <header>
             {!!meta.date && (
-                <time
-                    dateTime={meta.date}
+                <PostDate
+                    date={meta.date}
                     className="text-brand-gray text-sm font-medium"
-                >
-                    {formatDate(meta.date)}
-                </time>
+                />
             )}
-            <h1 className="mt-2 text-3xl font-bold tracking-tight">
+            <h1 className="mt-2 text-2xl font-bold tracking-tight">
                 {meta.title}
             </h1>
             {!!meta.description && (

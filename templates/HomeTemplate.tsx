@@ -1,17 +1,17 @@
+import type { TemplateProps } from "nefantaris";
 import { Link } from "wouter";
 import PostList from "../components/PostList";
 import Prose from "../components/Prose";
-import type { PostListTemplateProps } from "../types";
 
 const recentPostLimit = 3;
 
-const HomeTemplate = ({ meta, posts, children }: PostListTemplateProps) => {
+const HomeTemplate = ({ meta, posts, children }: TemplateProps) => {
     const recentPosts = posts.slice(0, recentPostLimit);
 
     return (
         <div className="flex flex-col gap-16">
             <section className="max-w-3xl">
-                <h1 className="text-4xl font-bold tracking-tight">
+                <h1 className="text-2xl font-bold tracking-tight">
                     {meta.title}
                 </h1>
                 {!!meta.description && (

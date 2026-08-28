@@ -1,15 +1,11 @@
+import type { TemplateProps } from "nefantaris";
 import PostList from "../components/PostList";
 import Prose from "../components/Prose";
-import type { PostListTemplateProps } from "../types";
 
-const BlogIndexTemplate = ({
-    meta,
-    posts,
-    children,
-}: PostListTemplateProps) => (
+const BlogIndexTemplate = ({ meta, posts, children }: TemplateProps) => (
     <div className="mx-auto max-w-3xl">
         <header>
-            <h1 className="text-3xl font-bold tracking-tight">{meta.title}</h1>
+            <h1 className="text-2xl font-bold tracking-tight">{meta.title}</h1>
             {!!meta.description && (
                 <p className="text-brand-gray mt-4 text-lg">
                     {meta.description}

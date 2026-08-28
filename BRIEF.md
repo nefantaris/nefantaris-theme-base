@@ -10,8 +10,8 @@ The default theme every new Nefantaris site starts with, and the recommended par
 - Layout primitives: header/nav, footer, content column
 - Design tokens (colors, type scale, spacing) expressed so a child theme can override tokens without touching components
 - At least one directive component (e.g. `::gallery`) to prove the directive pipeline
-- A declared contract: which frontmatter fields it understands, which directives it provides, what a child theme may override
-- Dev sandbox: the scaffolded app renders the theme against sample content for local development
+- A declared contract: `theme.json` names the layout, every template, every directive, and the plugins the theme requires
+- Preview: none of its own. `nef theme dev` renders this theme against nefantaris-core's fixture corpus, which is the same content core builds itself against
 
 ## Non-goals (v1)
 
@@ -20,7 +20,6 @@ The default theme every new Nefantaris site starts with, and the recommended par
 
 ## Open questions
 
-- The exact shape of the theme export (this is the important design work — do it deliberately, with nefantaris-core)
 - How tokens are expressed (Tailwind theme extension vs CSS custom properties vs both)
 - How much page structure is theme-owned vs frontmatter-driven
 

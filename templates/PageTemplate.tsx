@@ -1,5 +1,5 @@
+import type { TemplateProps } from "nefantaris";
 import Prose from "../components/Prose";
-import type { TemplateProps } from "../types";
 
 const PageTemplate = ({ meta, children }: TemplateProps) => (
     <article className="mx-auto max-w-3xl">
