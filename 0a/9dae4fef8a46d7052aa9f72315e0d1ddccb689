@@ -1,0 +1,49 @@
+components/PostList.tsx
+  s_77e635b65a3b96::t_24a700635e78aa 26,38
+README.md
+  s_77e635b65a3b96::t_92f852b8d911fa 19,45-94,120-124
+  s_77e635b65a3b96::t_e3eec1eea7f6f1 125
+templates/BlogIndexTemplate.tsx
+  s_77e635b65a3b96::t_24a700635e78aa 32,63
+Layout.tsx
+  s_77e635b65a3b96::t_24a700635e78aa 62,90,107,118,132,160,164,173,212
+  s_77e635b65a3b96::t_92dd82a145f432 216-224
+  s_77e635b65a3b96::t_7ff1114eba2ad6 40
+templates/HomeTemplate.tsx
+  s_77e635b65a3b96::t_8895c3d5112973 8-20,23-26,32-33,37,42,51,57
+  s_77e635b65a3b96::t_6cdc320e73b9fd 21-22,46,48,63
+templates/NotFoundTemplate.tsx
+  s_77e635b65a3b96::t_24a700635e78aa 12
+templates/LinkPageTemplate.tsx
+  s_77e635b65a3b96::t_24a700635e78aa 14,19,23,30-31,45
+templates/PageTemplate.tsx
+  s_77e635b65a3b96::t_24a700635e78aa 11
+components/Prose.tsx
+  s_77e635b65a3b96::t_cea6779053918c 2,5,7-95,98-103
+BRIEF.md
+  s_77e635b65a3b96::t_92f852b8d911fa 18
+templates/PostTemplate.tsx
+  s_77e635b65a3b96::t_24a700635e78aa 12,19
+directives/Buttons.tsx
+  s_77e635b65a3b96::t_734f65109781c1 1-30
+theme.css
+  s_77e635b65a3b96::t_82c5bfc3500528 57,59-60,62-65,67-68,70-72,76-109,111
+theme.json
+  s_77e635b65a3b96::t_14b096292bf4a2 14-15
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "0a9dae4fef8a46d7052aa9f72315e0d1ddccb689",
+  "prompts": {},
+  "sessions": {
+    "s_77e635b65a3b96": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "af9eb310-625d-4060-a50f-46bad52a90be",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "adamjsturge <adamjsturge@gmail.com>"
+    }
+  }
+}
