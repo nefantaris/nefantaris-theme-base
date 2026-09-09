@@ -9,14 +9,14 @@ const PostTemplate = ({ meta, children }: TemplateProps) => (
             {!!meta.date && (
                 <PostDate
                     date={meta.date}
-                    className="text-brand-gray block text-xs font-semibold tracking-[0.08em] uppercase"
+                    className="text-brand-muted block text-xs font-semibold tracking-[0.08em] uppercase"
                 />
             )}
             <h1 className="mt-3 text-3xl font-bold tracking-tight text-balance sm:text-4xl">
                 {meta.title}
             </h1>
             {!!meta.description && (
-                <p className="text-brand-gray mt-4 text-lg leading-8 text-pretty">
+                <p className="text-brand-muted mt-4 text-lg leading-8 text-pretty">
                     {meta.description}
                 </p>
             )}

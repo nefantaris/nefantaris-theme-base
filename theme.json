@@ -11,7 +11,8 @@
         "linkPage": "templates/LinkPageTemplate.tsx"
     },
     "directives": {
-        "gallery": "directives/Gallery.tsx"
+        "gallery": "directives/Gallery.tsx",
+        "buttons": "directives/Buttons.tsx"
     },
     "requires": ["nefantaris-plugin-date-fns"]
 }

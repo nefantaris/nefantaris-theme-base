@@ -8,7 +8,7 @@ const PageTemplate = ({ meta, children }: TemplateProps) => (
                 {meta.title}
             </h1>
             {!!meta.description && (
-                <p className="text-brand-gray mt-4 text-lg leading-8 text-pretty">
+                <p className="text-brand-muted mt-4 text-lg leading-8 text-pretty">
                     {meta.description}
                 </p>
             )}

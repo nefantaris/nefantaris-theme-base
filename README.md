@@ -16,7 +16,7 @@ together.
 | Path            | What it is                                        |
 | --------------- | ------------------------------------------------- |
 | `theme.json`    | The manifest: layout, templates, directives, deps |
-| `theme.css`     | Tailwind 4 `@theme` tokens and the font faces     |
+| `theme.css`     | Design tokens, light and dark, and the font faces |
 | `Layout.tsx`    | Header, nav, content column, footer               |
 | `templates/`    | One component per template named in the manifest  |
 | `directives/`   | Components markdown block directives render as    |
@@ -42,6 +42,56 @@ labels, and a top-level `- [label](url)` list renders as full-width buttons.
 External links — which core renders with `target="_blank"` — get an ↗
 marker.
 
+### The home page
+
+`home` renders the page's `title` as a large headline and its `description` as
+the lead paragraph, so on the home page the frontmatter title is the hero
+copy rather than a label — the browser tab shows the site name there anyway.
+Below the hero, every `## ` heading in the body starts a section: on large
+screens the heading sits in a narrow left column and the content that follows
+it fills the right, and on small screens they stack. A `:::buttons` block
+placed first in the body becomes the hero's call to action.
+
+## Directives
+
+| Name      | Component                 | Renders                                   |
+| --------- | ------------------------- | ----------------------------------------- |
+| `gallery` | `directives/Gallery.tsx`  | Images in a responsive grid               |
+| `buttons` | `directives/Buttons.tsx`  | A list of links as a row of buttons       |
+
+```md
+:::buttons
+- [Read the blog](/blog)
+- [About](/about)
+:::
+```
+
+The first link in a `buttons` block is the filled primary button; the rest are
+outlined. External links get the same ↗ marker as on a link page.
+
+## Dark mode
+
+The theme follows `prefers-color-scheme`. Every color in the components is one
+of the tokens below, and `theme.css` defines each token twice — once for light
+and once inside a `@media (prefers-color-scheme: dark)` block — so there is no
+JavaScript, no flash, and nothing for a page to do. There is no manual toggle:
+a stored preference would have to be applied before first paint, and the theme
+contract gives a theme no way to run anything in `<head>`.
+
+| Token               | Use                                       |
+| ------------------- | ----------------------------------------- |
+| `brand-primary`     | Links, the primary button, focus rings    |
+| `brand-primaryHover`| Hover state of the above                  |
+| `brand-onPrimary`   | Text on a `brand-primary` background      |
+| `brand-text`        | Body text and headings                    |
+| `brand-muted`       | Secondary text, dates, labels             |
+| `brand-background`  | The page                                  |
+| `brand-surface`     | Code blocks, menus, hover fills           |
+| `brand-border`      | Hairlines                                 |
+
+A child theme changes the palette by shadowing `theme.css` and redefining the
+`--brand-*` custom properties in either or both blocks.
+
 ## Commands
 
 Everything runs through the `nef` CLI, from anywhere:
@@ -66,6 +116,12 @@ enables it with `nef plugins add nefantaris-plugin-date-fns`.
 A site can shadow any file in this repo by path from the theme root — drop
 `child-theme/theme.css` in the site repo to override the tokens without
 touching a component.
+
+`components/Prose.tsx` styles markdown through `:where()` selectors, so its
+rules carry no class specificity. A directive or template that wraps markdown
+can restyle any element inside it with an ordinary `[&>ul]:flex`-style
+variant and win without `!important`; `directives/Buttons.tsx` is the
+example.
 
 ## License
 

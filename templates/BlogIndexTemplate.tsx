@@ -29,7 +29,7 @@ const BlogIndexTemplate = ({ meta, posts, children }: TemplateProps) => {
                     {meta.title}
                 </h1>
                 {!!meta.description && (
-                    <p className="text-brand-gray mt-5 max-w-2xl text-xl leading-8 text-pretty">
+                    <p className="text-brand-muted mt-5 max-w-2xl text-xl leading-8 text-pretty">
                         {meta.description}
                     </p>
                 )}
@@ -60,7 +60,7 @@ const BlogIndexTemplate = ({ meta, posts, children }: TemplateProps) => {
                     </section>
                 ))
             ) : (
-                <p className="text-brand-gray border-brand-border mt-12 border-t pt-8">
+                <p className="text-brand-muted border-brand-border mt-12 border-t pt-8">
                     No posts yet.
                 </p>
             )}

@@ -23,7 +23,7 @@ const PostList = ({
                         <PostDate
                             date={post.date}
                             format={dateFormat}
-                            className="text-brand-gray block text-sm tabular-nums sm:pt-1"
+                            className="text-brand-muted block text-sm tabular-nums sm:pt-1"
                         />
                         <div className="mt-1 sm:mt-0">
                             <PostTitleTag className="text-lg leading-snug font-semibold tracking-tight">
@@ -35,7 +35,7 @@ const PostList = ({
                                 </Link>
                             </PostTitleTag>
                             {!!post.description && (
-                                <p className="text-brand-gray mt-1.5 leading-7 text-pretty">
+                                <p className="text-brand-muted mt-1.5 leading-7 text-pretty">
                                     {post.description}
                                 </p>
                             )}

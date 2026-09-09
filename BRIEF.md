@@ -15,7 +15,7 @@ The default theme every new Nefantaris site starts with, and the recommended par
 
 ## Non-goals (v1)
 
-- Multiple visual variants or dark mode
+- Multiple visual variants. Dark mode follows the visitor's system preference; a manual toggle waits on core giving themes a `<head>` channel, because a stored preference has to be applied before first paint to avoid a flash
 - Commerce, comments, or anything dynamic
 
 ## Open questions

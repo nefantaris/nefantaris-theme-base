@@ -37,7 +37,7 @@ const NavLink = ({
             className,
             isActive
                 ? activeClassName
-                : "text-brand-gray hover:text-brand-black"
+                : "text-brand-muted hover:text-brand-text border-transparent"
         )}
     >
         {item.label}
@@ -59,7 +59,7 @@ const PrimaryNav = ({ nav, currentPath }: PrimaryNavProps) => (
                         currentPath={currentPath}
                         isActive={isWithinBranch(item, currentPath)}
                         className="inline-block border-b-2 py-4 text-sm font-medium"
-                        activeClassName="border-brand-primary text-brand-black"
+                        activeClassName="border-brand-primary text-brand-text"
                     />
                 </li>
             ))}
@@ -87,7 +87,7 @@ const SectionNav = ({ branch, items, currentPath }: SectionNavProps) => (
                             currentPath={currentPath}
                             isActive={isCurrentPath(child.href, currentPath)}
                             className="inline-block py-2.5 text-sm"
-                            activeClassName="text-brand-black font-semibold"
+                            activeClassName="text-brand-text font-semibold"
                         />
                     </li>
                 ))}
@@ -104,7 +104,7 @@ type MenuNavProps = {
 const MenuNav = ({ nav, currentPath }: MenuNavProps) => (
     <nav aria-label={mainNavigationLabel} className="relative">
         <details>
-            <summary className="text-brand-gray hover:text-brand-black cursor-pointer rounded-md px-2 py-1 text-sm font-medium transition-colors duration-100">
+            <summary className="text-brand-muted hover:text-brand-text cursor-pointer rounded-md px-2 py-1 text-sm font-medium transition-colors duration-100">
                 Menu
             </summary>
             <ul className="border-brand-border bg-brand-background absolute top-full right-0 z-10 mt-2 flex min-w-48 flex-col gap-1 rounded-md border p-2">
@@ -115,7 +115,7 @@ const MenuNav = ({ nav, currentPath }: MenuNavProps) => (
                             currentPath={currentPath}
                             isActive={isCurrentPath(item.href, currentPath)}
                             className="hover:bg-brand-surface block rounded-md px-3 py-2 text-sm font-medium"
-                            activeClassName="text-brand-black bg-brand-surface"
+                            activeClassName="text-brand-text bg-brand-surface"
                         />
                         {!!item.children?.length && (
                             <ul className="border-brand-border ml-3 flex flex-col gap-1 border-l pl-2">
@@ -129,7 +129,7 @@ const MenuNav = ({ nav, currentPath }: MenuNavProps) => (
                                                 currentPath
                                             )}
                                             className="hover:bg-brand-surface block rounded-md px-3 py-1.5 text-sm"
-                                            activeClassName="text-brand-black bg-brand-surface"
+                                            activeClassName="text-brand-text bg-brand-surface"
                                         />
                                     </li>
                                 ))}
@@ -157,11 +157,11 @@ const Layout = ({
     return (
         <div
             data-template={template}
-            className="bg-brand-background text-brand-black flex min-h-screen flex-col antialiased"
+            className="bg-brand-background text-brand-text flex min-h-screen flex-col antialiased"
         >
             <a
                 href="#main-content"
-                className="bg-brand-primary text-brand-white sr-only z-50 rounded-md px-4 py-2 font-medium focus:not-sr-only focus:fixed focus:top-4 focus:left-4"
+                className="bg-brand-primary text-brand-onPrimary sr-only z-50 rounded-md px-4 py-2 font-medium focus:not-sr-only focus:fixed focus:top-4 focus:left-4"
             >
                 Skip to main content
             </a>
@@ -170,7 +170,7 @@ const Layout = ({
                     <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-4 py-3 sm:px-6">
                         <Link
                             href="/"
-                            className="text-brand-gray hover:text-brand-black text-sm font-semibold tracking-tight transition-colors duration-100"
+                            className="text-brand-muted hover:text-brand-text text-sm font-semibold tracking-tight transition-colors duration-100"
                         >
                             {site.name}
                         </Link>
@@ -209,11 +209,19 @@ const Layout = ({
                 {children}
             </main>
             <footer className="border-brand-border border-t">
-                <div className="text-brand-gray mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-x-6 gap-y-2 px-4 py-8 text-sm sm:px-6">
+                <div className="text-brand-muted mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-x-6 gap-y-2 px-4 py-8 text-sm sm:px-6">
                     <p>
                         © {new Date().getFullYear()} {site.name}
                     </p>
-                    <p>Built with Nefantaris</p>
+                    <p>
+                        Built with{" "}
+                        <a
+                            href="https://nefantaris.com"
+                            className="text-brand-text hover:text-brand-primary font-medium transition-colors duration-100"
+                        >
+                            Nefantaris
+                        </a>
+                    </p>
                 </div>
             </footer>
         </div>

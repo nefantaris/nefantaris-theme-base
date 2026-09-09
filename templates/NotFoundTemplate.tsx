@@ -9,7 +9,7 @@ const NotFoundTemplate = ({ site }: NotFoundProps) => (
         <h1 className="mt-3 text-4xl font-bold tracking-tight text-balance sm:text-5xl">
             Page not found
         </h1>
-        <p className="text-brand-gray mt-5 text-lg leading-8 text-pretty">
+        <p className="text-brand-muted mt-5 text-lg leading-8 text-pretty">
             There is no page at this address on {site.name}. It may have moved,
             or the link you followed may be out of date.
         </p>
