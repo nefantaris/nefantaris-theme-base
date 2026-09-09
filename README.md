@@ -24,6 +24,24 @@ together.
 | `classNames.ts` | Conditional class helper                          |
 | `fonts/`        | Open Sans, subset and self-hosted                 |
 
+## Templates
+
+| Name        | Component                         | Renders                     |
+| ----------- | --------------------------------- | --------------------------- |
+| `page`      | `templates/PageTemplate.tsx`      | A generic content page      |
+| `notFound`  | `templates/NotFoundTemplate.tsx`  | The 404 page                |
+| `home`      | `templates/HomeTemplate.tsx`      | The site's home page        |
+| `post`      | `templates/PostTemplate.tsx`      | A single blog post          |
+| `blogIndex` | `templates/BlogIndexTemplate.tsx` | The year-grouped blog index |
+| `linkPage`  | `templates/LinkPageTemplate.tsx`  | A "link in bio" style page  |
+
+A page opts into `linkPage` with `template: linkPage` in its frontmatter.
+The body then follows a few conventions: a first paragraph holding a single
+image becomes a round avatar, `## ` headings become small centered section
+labels, and a top-level `- [label](url)` list renders as full-width buttons.
+External links — which core renders with `target="_blank"` — get an ↗
+marker.
+
 ## Commands
 
 Everything runs through the `nef` CLI, from anywhere:

@@ -6,7 +6,7 @@ The default theme every new Nefantaris site starts with, and the recommended par
 
 ## v1 scope
 
-- Pages: home, blog index, post, generic content page, 404
+- Pages: home, blog index, post, generic content page, 404, link page
 - Layout primitives: header/nav, footer, content column
 - Design tokens (colors, type scale, spacing) expressed so a child theme can override tokens without touching components
 - At least one directive component (e.g. `::gallery`) to prove the directive pipeline

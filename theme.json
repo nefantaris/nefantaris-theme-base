@@ -7,7 +7,8 @@
         "notFound": "templates/NotFoundTemplate.tsx",
         "home": "templates/HomeTemplate.tsx",
         "post": "templates/PostTemplate.tsx",
-        "blogIndex": "templates/BlogIndexTemplate.tsx"
+        "blogIndex": "templates/BlogIndexTemplate.tsx",
+        "linkPage": "templates/LinkPageTemplate.tsx"
     },
     "directives": {
         "gallery": "directives/Gallery.tsx"
