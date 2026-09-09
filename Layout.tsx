@@ -1,6 +1,7 @@
 import type { LayoutProps, NavItem } from "nefantaris";
 import { Link } from "wouter";
 import classNames from "./classNames";
+import ModeSwitch from "./components/ModeSwitch";
 
 const linkPageTemplateName = "linkPage";
 const mainNavigationLabel = "Main navigation";
@@ -147,6 +148,7 @@ const Layout = ({
     nav,
     currentPath,
     template,
+    modes,
     children,
 }: LayoutProps) => {
     const isLinkPage = template === linkPageTemplateName;
@@ -174,9 +176,12 @@ const Layout = ({
                         >
                             {site.name}
                         </Link>
-                        {!!nav.length && (
-                            <MenuNav nav={nav} currentPath={currentPath} />
-                        )}
+                        <div className="flex items-center gap-x-2">
+                            {!!nav.length && (
+                                <MenuNav nav={nav} currentPath={currentPath} />
+                            )}
+                            <ModeSwitch modes={modes} />
+                        </div>
                     </div>
                 ) : (
                     <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-x-10 px-4 sm:px-6">
@@ -186,9 +191,15 @@ const Layout = ({
                         >
                             {site.name}
                         </Link>
-                        {!!nav.length && (
-                            <PrimaryNav nav={nav} currentPath={currentPath} />
-                        )}
+                        <div className="flex items-center gap-x-6">
+                            {!!nav.length && (
+                                <PrimaryNav
+                                    nav={nav}
+                                    currentPath={currentPath}
+                                />
+                            )}
+                            <ModeSwitch modes={modes} />
+                        </div>
                     </div>
                 )}
                 {!isLinkPage && !!activeBranch?.children?.length && (

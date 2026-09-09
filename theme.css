@@ -74,7 +74,7 @@
 
 @layer base {
     :root {
-        color-scheme: light dark;
+        color-scheme: light;
 
         --brand-primary: #0e6b5f;
         --brand-primary-hover: #0a4f47;
@@ -88,19 +88,19 @@
         --brand-border: #dcd8cf;
     }
 
-    @media (prefers-color-scheme: dark) {
-        :root {
-            --brand-primary: #5fc0af;
-            --brand-primary-hover: #7dd0c1;
-            --brand-on-primary: #141311;
+    :root[data-mode="dark"] {
+        color-scheme: dark;
 
-            --brand-text: #f2f0eb;
-            --brand-muted: #a6a19a;
+        --brand-primary: #5fc0af;
+        --brand-primary-hover: #7dd0c1;
+        --brand-on-primary: #141311;
 
-            --brand-background: #141311;
-            --brand-surface: #1e1c19;
-            --brand-border: #35322c;
-        }
+        --brand-text: #f2f0eb;
+        --brand-muted: #a6a19a;
+
+        --brand-background: #141311;
+        --brand-surface: #1e1c19;
+        --brand-border: #35322c;
     }
 
     html {

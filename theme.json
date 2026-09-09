@@ -14,5 +14,6 @@
         "gallery": "directives/Gallery.tsx",
         "buttons": "directives/Buttons.tsx"
     },
+    "modes": ["light", "dark"],
     "requires": ["nefantaris-plugin-date-fns"]
 }

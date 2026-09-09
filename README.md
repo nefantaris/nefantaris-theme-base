@@ -69,14 +69,22 @@ placed first in the body becomes the hero's call to action.
 The first link in a `buttons` block is the filled primary button; the rest are
 outlined. External links get the same ↗ marker as on a link page.
 
-## Dark mode
+## Modes
 
-The theme follows `prefers-color-scheme`. Every color in the components is one
-of the tokens below, and `theme.css` defines each token twice — once for light
-and once inside a `@media (prefers-color-scheme: dark)` block — so there is no
-JavaScript, no flash, and nothing for a page to do. There is no manual toggle:
-a stored preference would have to be applied before first paint, and the theme
-contract gives a theme no way to run anything in `<head>`.
+The theme ships two modes, `light` and `dark`. A site follows the visitor's
+system setting by default and shows a switch in the header; the choice is
+remembered per visitor. Core applies the mode to `<html data-mode>` before
+first paint, so there is no flash and nothing for a page to do.
+
+A site sets the default or turns a mode off in `nefantaris.json`:
+
+```json
+"modes": { "default": "dark", "exclude": ["light"] }
+```
+
+With one mode left the switch disappears.
+
+Every color in the components is one of the tokens below.
 
 | Token               | Use                                       |
 | ------------------- | ----------------------------------------- |
@@ -90,7 +98,7 @@ contract gives a theme no way to run anything in `<head>`.
 | `brand-border`      | Hairlines                                 |
 
 A child theme changes the palette by shadowing `theme.css` and redefining the
-`--brand-*` custom properties in either or both blocks.
+`--brand-*` custom properties on `:root` and `:root[data-mode="dark"]`.
 
 ## Commands
 
