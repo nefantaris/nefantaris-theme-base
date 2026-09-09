@@ -1,0 +1,68 @@
+components/postYear.ts
+  s_f61f199c0fba29::t_bb20da71494464 1-5
+README.md
+  s_f61f199c0fba29::t_06c03fc4ffc0da 29,31-36
+  s_f61f199c0fba29::t_cbd2e08787d162 27-28,37-44
+  s_f61f199c0fba29::t_1cb1a7a0d8f0af 30
+BRIEF.md
+  s_f61f199c0fba29::t_5ccf5a561e3e7d 9
+templates/LinkPageTemplate.tsx
+  s_f61f199c0fba29::t_ae906cd4ce9cac 31-35
+  s_f61f199c0fba29::t_f9a5114df85ecb 28-30
+  s_f61f199c0fba29::t_286c685f23f1f7 36-38
+  s_906fbbdab58490::t_e9c941f55a205a 1-27,39-54
+Layout.tsx
+  s_a2e903d235c5dc::t_424d86e69177bf 5-7,11-16,20-22,25-45,47-49,52-72,76-83,88-90,95-142,151-160,162-192,194-221
+components/PostList.tsx
+  s_a2e903d235c5dc::t_9d3d08163b57da 3,8,11-15,19,21-22,25-26,28-42
+components/Prose.tsx
+  s_a2e903d235c5dc::t_0f4c0f51a94559 3-73,75
+templates/BlogIndexTemplate.tsx
+  s_f61f199c0fba29::t_0813a629be642c 1,3,6-61,63-65,68-69
+templates/HomeTemplate.tsx
+  s_a2e903d235c5dc::t_88224320ef6e2e 6,12,14,18,22,27-31,34,36,40,42-43,46
+templates/NotFoundTemplate.tsx
+  s_a2e903d235c5dc::t_80af7ba976e1db 5-7,9,12-14,18,20-21
+templates/PageTemplate.tsx
+  s_a2e903d235c5dc::t_b96e66832840b0 5,7-9,11,16
+templates/PostTemplate.tsx
+  s_a2e903d235c5dc::t_7b0507fca60235 2,7,12,15,19,24,27-35
+theme.css
+  s_a2e903d235c5dc::t_cbcb5d80bcd04d 57-58,60-61,64-66,78-85
+theme.json
+  s_a2e903d235c5dc::t_b679f740fd70b9 10-11
+components/PostDate.tsx
+  s_906fbbdab58490::t_2f9477f11e63e9 4-11,15,18,20
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2",
+  "base_commit_sha": "079bed589caf5f134704e779133b075437f7448a",
+  "prompts": {},
+  "sessions": {
+    "s_906fbbdab58490": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "agent-a5dfb26ef2ced7623",
+        "model": "unknown"
+      },
+      "human_author": "adamjsturge <adamjsturge@gmail.com>"
+    },
+    "s_a2e903d235c5dc": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "32365e3b-e7ef-4ec2-8304-8c78cd7e23c5",
+        "model": "unknown"
+      },
+      "human_author": "adamjsturge <adamjsturge@gmail.com>"
+    },
+    "s_f61f199c0fba29": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "e4a12695-5be9-45f1-9d42-07f57945fe3a",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "adamjsturge <adamjsturge@gmail.com>"
+    }
+  }
+}
