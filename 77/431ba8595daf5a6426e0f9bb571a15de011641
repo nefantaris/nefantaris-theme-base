@@ -1,0 +1,29 @@
+Layout.tsx
+  s_77e635b65a3b96::t_3e3aff2e59a587 4,151,179-184,194-202
+theme.css
+  s_77e635b65a3b96::t_3e3aff2e59a587 77,91-92,94-96,98-103
+theme.json
+  s_77e635b65a3b96::t_3e3aff2e59a587 17
+components/ModeSwitch.tsx
+  s_77e635b65a3b96::t_3e3aff2e59a587 1-62
+BRIEF.md
+  s_77e635b65a3b96::t_3e3aff2e59a587 18
+README.md
+  s_77e635b65a3b96::t_3e3aff2e59a587 72,74-87,101
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "77431ba8595daf5a6426e0f9bb571a15de011641",
+  "prompts": {},
+  "sessions": {
+    "s_77e635b65a3b96": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "af9eb310-625d-4060-a50f-46bad52a90be",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "adamjsturge <adamjsturge@gmail.com>"
+    }
+  }
+}
