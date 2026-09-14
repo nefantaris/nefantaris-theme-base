@@ -54,20 +54,37 @@ placed first in the body becomes the hero's call to action.
 
 ## Directives
 
-| Name      | Component                 | Renders                                   |
-| --------- | ------------------------- | ----------------------------------------- |
-| `gallery` | `directives/Gallery.tsx`  | Images in a responsive grid               |
-| `buttons` | `directives/Buttons.tsx`  | A list of links as a row of buttons       |
+| Name      | Component                | Renders                              |
+| --------- | ------------------------ | ------------------------------------ |
+| `gallery` | `directives/Gallery.tsx` | Images in a responsive grid          |
+| `buttons` | `directives/Buttons.tsx` | A list of links as a row of buttons  |
+| `command` | `directives/Command.tsx` | A command to run, with a copy button |
 
 ```md
 :::buttons
+
 - [Read the blog](/blog)
 - [About](/about)
-:::
+  :::
 ```
 
 The first link in a `buttons` block is the filled primary button; the rest are
 outlined. External links get the same ↗ marker as on a link page.
+
+````md
+:::command
+
+```sh
+npx create-nef my-site
+```
+
+:::
+````
+
+A `command` block renders whatever is inside it on one scrolling line beside a
+copy button, so it suits a single command rather than a listing. The button
+copies the block's text and reads "Copied" for two seconds; copying needs
+JavaScript and a secure context, and the command stays selectable either way.
 
 ## Modes
 
@@ -86,16 +103,16 @@ With one mode left the switch disappears.
 
 Every color in the components is one of the tokens below.
 
-| Token               | Use                                       |
-| ------------------- | ----------------------------------------- |
-| `brand-primary`     | Links, the primary button, focus rings    |
-| `brand-primaryHover`| Hover state of the above                  |
-| `brand-onPrimary`   | Text on a `brand-primary` background      |
-| `brand-text`        | Body text and headings                    |
-| `brand-muted`       | Secondary text, dates, labels             |
-| `brand-background`  | The page                                  |
-| `brand-surface`     | Code blocks, menus, hover fills           |
-| `brand-border`      | Hairlines                                 |
+| Token                | Use                                    |
+| -------------------- | -------------------------------------- |
+| `brand-primary`      | Links, the primary button, focus rings |
+| `brand-primaryHover` | Hover state of the above               |
+| `brand-onPrimary`    | Text on a `brand-primary` background   |
+| `brand-text`         | Body text and headings                 |
+| `brand-muted`        | Secondary text, dates, labels          |
+| `brand-background`   | The page                               |
+| `brand-surface`      | Code blocks, menus, hover fills        |
+| `brand-border`       | Hairlines                              |
 
 A child theme changes the palette by shadowing `theme.css` and redefining the
 `--brand-*` custom properties on `:root` and `:root[data-mode="dark"]`.
