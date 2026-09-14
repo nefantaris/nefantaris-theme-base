@@ -1,0 +1,25 @@
+README.md
+  s_6cad53c7a8f385::t_881ca714bdc320 57-61,75-81,83-87
+  s_6cad53c7a8f385::t_11a57e65d5ac41 74,82
+  s_6cad53c7a8f385::t_e109ca1ebf3898 65,68,88,106-115
+theme.json
+  s_6cad53c7a8f385::t_f5cfd38cdb69ea 15-16
+directives/Command.tsx
+  s_6cad53c7a8f385::t_f5cfd38cdb69ea 1-103
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "e6e628b101136781a30cc412ab9097529ec67c04",
+  "prompts": {},
+  "sessions": {
+    "s_6cad53c7a8f385": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "80a1fa1d-8404-4b51-8e37-8d5348f132e5",
+        "model": "claude-opus-5"
+      },
+      "human_author": "adamjsturge <adamjsturge@gmail.com>"
+    }
+  }
+}
