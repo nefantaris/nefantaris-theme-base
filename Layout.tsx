@@ -3,6 +3,8 @@ import { Link } from "wouter";
 import classNames from "./classNames";
 import ModeSwitch from "./components/ModeSwitch";
 
+const currentYear = new Date().getFullYear();
+
 const linkPageTemplateName = "linkPage";
 const mainNavigationLabel = "Main navigation";
 
@@ -222,7 +224,7 @@ const Layout = ({
             <footer className="border-brand-border border-t">
                 <div className="text-brand-muted mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-x-6 gap-y-2 px-4 py-8 text-sm sm:px-6">
                     <p>
-                        © {new Date().getFullYear()} {site.name}
+                        © {currentYear} {site.name}
                     </p>
                     <p>
                         Built with{" "}
