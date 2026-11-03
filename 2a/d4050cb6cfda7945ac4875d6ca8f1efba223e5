@@ -1,0 +1,19 @@
+Layout.tsx
+  s_a8efbb04445385::t_a7915c62f6e577 6-7,227
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "2ad4050cb6cfda7945ac4875d6ca8f1efba223e5",
+  "prompts": {},
+  "sessions": {
+    "s_a8efbb04445385": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "e9e96e67-af6c-4fec-92b9-d9d9808b5bb7",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "adamjsturge <adamjsturge@gmail.com>"
+    }
+  }
+}
